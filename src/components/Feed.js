@@ -22,13 +22,13 @@ class Feed extends Component {
     }
     
     render() {
-    const articles = this.props.articles.reverse().map((article)=>
-                <div className="post-panel">
+    const articles = this.props.articles.reverse().map((article,i)=>
+                <div key={i} className="post-panel">
 
                     <div className="post-metadata">
                         <img alt="" className="avatar-image" src={article.author.provider_pic} height="40" width="40"/>
                         <div className="post-info">
-                            <div data-react-className="PopoverLink">
+                            <div data-react-classname="PopoverLink">
                             <span className="popover-link" data-reactroot=""><a href={`/profile/${article.author._id}`}>{article.author.name}</a></span></div>
                             <small>Posted • A must read</small>
                         </div>

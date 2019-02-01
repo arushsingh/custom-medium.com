@@ -11,12 +11,12 @@ class AsideFeed extends Component {
             .filter((a, b, self)=>{
                 return self.indexOf(a) === b
             })
-            .map((__article)=>
-                <a href='javascript:void(0);' className="tag">{__article}</a>
+            .map((__article,index)=>
+                <a key={index} href='javascript:void(0);' className="tag">{__article}</a>
             )
         const top_articles = this.props._articles.map((_article, i)=>
 
-                    <li className="top-stories-list-item">
+                    <li key={i}  className="top-stories-list-item">
                         <div className="count-button-wrapper">
                             <span className="count-button">{i}</span>
                         </div>
